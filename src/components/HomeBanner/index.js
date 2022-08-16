@@ -29,7 +29,7 @@ function HomBanner() {
                                         <h6>Spring / Summer Collection 2022</h6>
                                         <h1>Get up to 30% Off New Arrivals</h1>
                                         <div className="red_button shop_now_button">
-                                            <a onClick={handleClickOnShop} href="">shop now</a>
+                                            <a onClick={handleClickOnShop} href="#">shop now</a>
                                         </div>
                                     </div>
                                 </div>
@@ -51,7 +51,7 @@ function HomBanner() {
                                         <h6>Spring / Summer Collection 2022</h6>
                                         <h1>Get up to 30% Off New Arrivals</h1>
                                         <div className="red_button shop_now_button">
-                                            <a onClick={handleClickOnShop} href="">shop now</a>
+                                            <a onClick={handleClickOnShop} href="#">shop now</a>
                                         </div>
                                     </div>
                                 </div>
@@ -73,7 +73,7 @@ function HomBanner() {
                                         <h6>Spring / Summer Collection 2022</h6>
                                         <h1>Get up to 30% Off New Arrivals</h1>
                                         <div className="red_button shop_now_button">
-                                            <a onClick={handleClickOnShop} href="">shop now</a>
+                                            <a onClick={handleClickOnShop} href="#">shop now</a>
                                         </div>
                                     </div>
                                 </div>

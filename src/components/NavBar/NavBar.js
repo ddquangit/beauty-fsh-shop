@@ -52,7 +52,7 @@ function NavBar(props) {
                                     </li>
 
                                     <li>
-                                        <a href="contact.html">contact</a>
+                                        <a href="/contact">contact</a>
                                     </li>
                                 </ul>
                                 <ul className="navbar_user">

@@ -127,7 +127,7 @@ function Advertisement(props) {
                                     </li>
                                 </ul>
                                 <div className="red_button deal_ofthe_week_button">
-                                    <a onClick={handleClickOnShop} href="">shop now</a>
+                                    <a onClick={handleClickOnShop} href="#">shop now</a>
                                 </div>
                             </div>
                         </div>
