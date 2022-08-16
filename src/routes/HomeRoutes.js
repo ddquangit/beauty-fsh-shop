@@ -10,7 +10,7 @@ import BaseLayout from "../layouts/BaseLayout";
 
 var routes = [
   {
-    path: "/fshion-shop",
+    path: "/",
     exact: true,
     layout: BaseLayout,
     component: Home,
@@ -19,7 +19,7 @@ var routes = [
   {
     path: "/home",
     layout: BaseLayout,
-    component: () => <Redirect to="/fshion-shop" />,
+    component: () => <Redirect to="/" />,
   },
   {
     path: "/single-product/:id",
