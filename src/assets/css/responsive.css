@@ -140,6 +140,7 @@
   .product_details {
     top: 10%;
   }
+
   h1 {
     font-size: 48px;
   }
@@ -310,7 +311,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     flex: auto;
   }
 
@@ -933,11 +934,24 @@
   .check-out-link>.checkout--btn {
     display: none;
   }
+
   .main_slider_content h6 {
     display: none;
   }
 
   .quantity_selector {
-    width: 80px;
+    width: 90px;
+  }
+}
+
+@media only screen and (max-width: 274px) {
+
+  .qaty-btn {
+    flex-direction: column;
+    top: -12px;
+  }
+
+  .quantity_selector {
+    width: 100px;
   }
 }
