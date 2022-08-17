@@ -169,13 +169,6 @@ h6 {
   text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
 }
 
-h1::selection,
-h2::selection,
-h3::selection,
-h4::selection,
-h5::selection,
-h6::selection {}
-
 ::-webkit-input-placeholder {
   font-size: 16px !important;
   font-weight: 500;
@@ -395,20 +388,19 @@ section {
 }
 
 .currency:hover .currency_selection {
-  visibility: visible;
+  display: block;
   opacity: 1;
   top: 100%;
 }
 
 .currency_selection {
-  display: block;
+  display: none;
   position: absolute;
   right: 0;
   top: 120%;
   margin: 0;
   width: 100%;
   background: #ffffff;
-  visibility: hidden;
   opacity: 0;
   z-index: 1;
   box-shadow: 0 0 25px rgba(63, 78, 100, 0.15);
@@ -476,20 +468,19 @@ section {
 }
 
 .language:hover .language_selection {
-  visibility: visible;
+  display: block;
   opacity: 1;
   top: 100%;
 }
 
 .language_selection {
-  display: block;
+  display: none;
   position: absolute;
   right: 0;
   top: 120%;
   margin: 0;
   width: 100%;
   background: #ffffff;
-  visibility: hidden;
   opacity: 0;
   z-index: 1;
   box-shadow: 0 0 25px rgba(63, 78, 100, 0.15);
@@ -558,20 +549,19 @@ section {
 }
 
 .account:hover .account_selection {
-  visibility: visible;
+  display: block;
   opacity: 1;
   top: 100%;
 }
 
 .account_selection {
-  display: block;
+  display: none;
   position: absolute;
   right: 0;
   top: 120%;
   margin: 0;
   width: 100%;
-  background: #ffffff;
-  visibility: hidden;
+  background: #ffffff;;
   opacity: 0;
   z-index: 1;
   box-shadow: 0 0 25px rgba(63, 78, 100, 0.15);
@@ -745,7 +735,7 @@ section {
 
 .hamburger_container {
   display: none;
-  margin-left: 40px;
+  margin-left: 20px;
 }
 
 .hamburger_container i {
@@ -851,7 +841,7 @@ section {
   margin-left: 8px;
 }
 
-.menu_item.active .menu_selection {
+.menu_item:hover .menu_selection {
   display: block;
   visibility: visible;
   opacity: 1;
@@ -860,7 +850,7 @@ section {
 .menu_selection {
   margin: 0;
   width: 100%;
-  max-height: 0;
+  display: none;
   overflow: hidden;
   z-index: 1;
   -webkit-transition: all 0.3s ease;
@@ -1109,8 +1099,6 @@ section {
 .grid_sorting_button:first-child {
   margin-left: 0px;
 }
-
-.grid_sorting_button:last-child {}
 
 .grid_sorting_button.active:hover {
   background: #fe7c7f !important;
@@ -2077,8 +2065,8 @@ a:hover {
 }
 
 .mega-menu {
+  display: none;
   background: #ffffff;
-  visibility: hidden;
   opacity: 0;
   z-index: 1;
   min-width: 150px;
@@ -2090,7 +2078,7 @@ a:hover {
 }
 
 .mega-drop-down:hover .mega-menu {
-  visibility: visible;
+  display: block;
   opacity: 1;
   top: 100%;
   box-sizing: content-box;
@@ -2230,7 +2218,7 @@ ul.stander li a {
   font-weight: 900;
   font-family: sans-serif;
   background: url(https://cdn.pixabay.com/photo/2018/05/30/15/39/thunderstorm-3441687_960_720.jpg) no-repeat;
-  -webkit-background-clip: text;
+  --webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: cover;
   background-position: center;
@@ -2466,14 +2454,13 @@ ul.stander li a {
 }
 
 .product_sorting li ul {
-  display: block;
+  display: none;
   position: absolute;
   right: 0;
   top: 120%;
   margin: 0;
   width: 100%;
   background: #ffffff;
-  visibility: hidden;
   opacity: 0;
   z-index: 1;
   box-shadow: 0 15px 25px rgba(63, 78, 100, 0.15);
@@ -2485,7 +2472,7 @@ ul.stander li a {
 }
 
 .product_sorting>li:hover ul {
-  visibility: visible;
+  display: block;
   opacity: 1;
   top: calc(100% + 1px);
 }
@@ -2843,4 +2830,9 @@ ul.stander li a {
 
 .product_sorting > li a:hover {
   color: #fe4c50;
+}
+
+.mobile-menu-login:hover .menu_selection{
+  display: block;
+  max-height: 300px;
 }

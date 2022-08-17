@@ -61,11 +61,11 @@ function NavBar(props) {
                                             <i className="fa fa-search" aria-hidden="true"></i>
                                         </a>
                                     </li>
-                                    <li>
+                                    {/* <li>
                                         <a href="#">
                                             <i className="fa fa-user" aria-hidden="true"></i>
                                         </a>
-                                    </li>
+                                    </li> */}
                                     <li className="checkout">
                                         <a href='#' className='cart-icon'
                                         onClick={props.showCart}

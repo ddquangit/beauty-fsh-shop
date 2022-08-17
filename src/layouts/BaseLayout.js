@@ -2,7 +2,6 @@ import React, { useEffect, useState} from 'react'
 
 import TopNavBar from "../components/TopNavBar";
 import NavBarContainer from "../components/NavBar/NavBarContainer";
-import MobileMenu from "../components/MobileMenu";
 import Footer from "../components/Footer";
 
 function BaseLayout(props) {

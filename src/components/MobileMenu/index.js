@@ -1,6 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react';
 
-function index(props) {
+import Auth from "../../modules/Auth";
+import LoginRegisterForm from '../LoginRegisterForm';
+
+function MobileMenu(props) {
+
+    const [isModalShow, setIsModalShow] = useState(false);
+    const [isLoginForm, setIsLoginForm] = useState(true);
+
+    const loginClicked = () => {
+        setIsModalShow(true);
+        setIsLoginForm(true);
+    };
+
+    const registerClicked = () => {
+        setIsModalShow(true);
+        setIsLoginForm(false);
+    };
+
+    const showHideModal = () => {
+        setIsModalShow(false);
+    };
+
+    const logout = () => {
+        Auth.logout();
+        window.location.reload();
+    };
+
+
     return (
         <>
             <div
@@ -13,7 +40,7 @@ function index(props) {
                 </div>
                 <div className="hamburger_menu_content text-right">
                     <ul className="menu_top_nav">
-                        <li className="menu_item has-children">
+                        {/* <li className="menu_item has-children">
                             <a href="#">
                                 usd
                                 <i className="fa fa-angle-down"></i>
@@ -52,24 +79,38 @@ function index(props) {
                                     <a href="#">Spanish</a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> */}
                         <li className="menu_item has-children">
-                            <a href="#">
+                            <a className='mobile-menu-login' href="#">
                                 My Account
                                 <i className="fa fa-angle-down"></i>
                             </a>
                             <ul className="menu_selection">
-                                <li>
-                                    <a href="#">
-                                        <i className="fa fa-sign-in" aria-hidden="true"></i>Sign In
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i className="fa fa-user-plus" aria-hidden="true"></i>
-                                        Register
-                                    </a>
-                                </li>
+                                {Auth.getUserDetails() !== undefined &&
+                                    Auth.getUserDetails() !== null &&
+                                    Auth.getToken() !== undefined ? (
+
+                                    <li>
+                                        <a href="#" onClick={() => logout()}>
+                                            <i
+                                                className="fas fa-sign-in-alt"
+                                                aria-hidden="true"
+                                            ></i>
+                                            Logout
+                                        </a>
+                                    </li>
+                                ) : (<>
+                                    <li>
+                                        <a onClick={loginClicked} href="#">
+                                            Sign In
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a onClick={registerClicked} href="#">
+                                            Register
+                                        </a>
+                                    </li></>)
+                                }
                             </ul>
                         </li>
                         <li className="menu_item">
@@ -93,8 +134,15 @@ function index(props) {
                     </ul>
                 </div>
             </div>
+            <LoginRegisterForm
+                show={isModalShow}
+                login={isLoginForm}
+                registerClicked={() => registerClicked()}
+                loginClicked={() => loginClicked()}
+                onHide={() => showHideModal()}
+            />
         </>
     )
 }
 
-export default index
+export default MobileMenu

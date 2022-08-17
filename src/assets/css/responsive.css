@@ -418,6 +418,10 @@
     display: none;
   }
 
+  .image_col {
+    padding: 0;
+  }
+
   .main_slider_content h6 {
     margin-bottom: 20px;
   }
@@ -637,11 +641,7 @@
   }
 
   .hamburger_container {
-    margin-left: 25px;
-  }
-
-  .hamburger_container i {
-    font-size: 16px;
+    margin-left: 20px;
   }
 
   .hamburger_close {
