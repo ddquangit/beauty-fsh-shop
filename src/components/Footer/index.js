@@ -53,8 +53,8 @@ function Footer(props) {
             <div className="footer_nav_container">
               <div className="cr">
                 ©2022 All Rights Reserverd. This template is made with{" gg "}
-                <i className="fa fa-heart-o" aria-hidden="true"></i> by{" gg "}
-                <a href="https://google.com/" target="_blank">
+                <i className="fa fa-heart-o" aria-hidden="true"></i>by{" "}
+                <a style={{display : "inline-block"}} href="https://google.com/" target="_blank">
                   gg
                 </a>
               </div>

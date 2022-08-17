@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { Modal } from "react-bootstrap";
+
 import CartUpdateQty from './CartUpdateQty';
 
 function CartItem({ items, handleClick }) {
@@ -12,8 +14,8 @@ function CartItem({ items, handleClick }) {
 
     return (
         <>
-            {isShowOverlay && <div className="shopping--cart--item-overlay">
-            </div>}
+            {/* {isShowOverlay && <div className="shopping--cart--item-overlay">
+            </div>} */}
             <div style={{ marginTop: 30 }}>
                 {items !== undefined &&
                     items !== null &&
@@ -21,14 +23,26 @@ function CartItem({ items, handleClick }) {
                         return (
                             <div key={id}>
                                 {isShowOverlay && idShow === id &&
-                                    <CartUpdateQty
-                                        id={id}
-                                        items={items}
-                                        handleClick={handleClick}
-                                        handleShowOverlay={() => handleShowOverlay()}
-                                    />
-                                    }
-
+                                    <>
+                                        <Modal
+                                            show={isShowOverlay}
+                                            size="lg"
+                                            aria-labelledby="contained-modal-title-vcenter"
+                                            centered
+                                            id="prd-modal"
+                                            className="modal fade"
+                                        >
+                                            <Modal.Body>
+                                                <CartUpdateQty
+                                                    id={id}
+                                                    items={items}
+                                                    handleClick={handleClick}
+                                                    handleShowOverlay={() => handleShowOverlay()}
+                                                />
+                                            </Modal.Body>
+                                        </Modal>
+                                    </>
+                                }
                                 <div className="row shopping--cart--item" data-aos="fade-up">
                                     <div className="col-lg-2 col-md-4 col-sm-12 col-12">
                                         <div className="cart--item--img">

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import LoadingOverlay from '../../components/LoadingOverlay';
 
 function CartUpdateQty({ id, items, handleClick, handleShowOverlay }) {
 
@@ -96,14 +97,9 @@ function CartUpdateQty({ id, items, handleClick, handleShowOverlay }) {
                         </div>
                     </div>
                 </div>
-                : (<div class="loading-container">
-                    <div className='loadding-bar'>
-                        <div class="Loaderdot"></div>
-                        <div class="Loaderdot"></div>
-                        <div class="Loaderdot"></div>
-                        <div class="Loaderdot"></div>
-                    </div>
-                </div>)}
+                : (<LoadingOverlay
+                    show={true}
+                />)}
 
         </>
     )

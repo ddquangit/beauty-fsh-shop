@@ -7,13 +7,16 @@ import BestSeller from "../../components/Products/BestSeller";
 import Benefit from "../../components/Benefit";
 import Advertisement from "../../components/Advertisement";
 import LoginRegisterForm from "../../components/LoginRegisterForm";
+import LoadingOverlay from '../../components/LoadingOverlay';
 
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 
+
 function Home(props) {
 
     const { products, departments } = props;
+    const [ isShowLoad, setIsShowLoad ] = useState(false);
     const [isModalShow, setIsModalShow] = useState(false);
     const [isLoginForm, setIsLoginForm] = useState(true);
 
@@ -39,6 +42,11 @@ function Home(props) {
         }
     };
 
+    const handleShowLoad = () => {
+        setTimeout(() => setIsShowLoad(false), 2000);
+        setIsShowLoad(true);
+    }
+
     const loginClicked = () => {
         setIsModalShow(true);
         setIsLoginForm(true);
@@ -62,6 +70,7 @@ function Home(props) {
                     products={products}
                     departments={departments}
                     addToBag={addToBag}
+                    handleShowLoad={handleShowLoad}
                 />
             ) : (<div className='container'>
                 <Skeleton wrapper={NewArrivals} />
@@ -87,6 +96,7 @@ function Home(props) {
                     products={products}
                     departments={departments}
                     addToBag={addToBag}
+                    handleShowLoad={handleShowLoad}
                 />
             ) : (<div className='container'>
                 <Skeleton wrapper={BestSeller} />
@@ -112,6 +122,11 @@ function Home(props) {
                 loginClicked={() => loginClicked()}
                 onHide={() => showHideModal()}
             />
+            {!isModalShow &&
+                <LoadingOverlay
+                    show={isShowLoad}
+                />
+            }
         </>
     )
 }

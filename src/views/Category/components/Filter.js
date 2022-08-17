@@ -28,12 +28,10 @@ function Filter(props) {
                             return (
                                 <li key={index} className="active">
                                     <Link to={`/shops/${item}`}>
-                                        <a>
                                             <span>
                                                 <i className="fa fa-angle-double-right" aria-hidden="true"></i>
                                             </span>
                                             {item}
-                                        </a>
                                     </Link>
                                 </li>
                             )
@@ -41,7 +39,7 @@ function Filter(props) {
                         return (
                             <li key={index}>
                                 <Link to={`/shops/${item}`}>
-                                    <a>{item}</a>
+                                    {item}
                                 </Link>
                             </li>
                         )

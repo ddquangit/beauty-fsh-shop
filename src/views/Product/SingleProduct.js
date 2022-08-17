@@ -3,6 +3,7 @@ import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 
 import LoginRegisterForm from "../../components/LoginRegisterForm";
+import LoadingOverlay from "../../components/LoadingOverlay"
 import Auth from "../../modules/Auth";
 
 function SingleProduct(props) {
@@ -243,7 +244,7 @@ function SingleProduct(props) {
                                                 addToBag();
                                                 setCount(1);
                                                 setIsLoad(true);
-                                                setTimeout(() => setIsLoad(false),2000)
+                                                setTimeout(() => setIsLoad(false), 2000)
                                             }}
                                         >
                                             <button className='add-cart-btn'>add to cart</button>
@@ -304,14 +305,10 @@ function SingleProduct(props) {
                     onHide={() => showHideModal()}
                 />
             </div>
-            {isLoad && <div class="loading-container">
-                <div className='loadding-bar'>
-                    <div class="Loaderdot"></div>
-                    <div class="Loaderdot"></div>
-                    <div class="Loaderdot"></div>
-                    <div class="Loaderdot"></div>
-                </div>
-            </div>}
+            {!isModalShow &&
+                < LoadingOverlay
+                    show={isLoad}
+                />}
         </>
     )
 }

@@ -79,6 +79,7 @@ function NewArrivals(props) {
                                         <SingleProduct
                                             productItem={item}
                                             addToBag={props.addToBag}
+                                            handleShowLoad={props.handleShowLoad}
                                         />
                                     </div>
                                 );

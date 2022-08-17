@@ -14,7 +14,7 @@ function HomBanner() {
 
     return (
         <>
-            <Carousel>
+            <Carousel indicators={false}>
                 <Carousel.Item>
                     <div
                         className="d-block w-100 main_slider"

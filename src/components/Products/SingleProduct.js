@@ -36,7 +36,11 @@ function SingleProduct(props) {
                 </Link>
                 <div
                     className="red_button add_to_cart_button"
-                    onClick={() => props.addToBag(productItem._id)}
+                    onClick={() => {
+                        props.handleShowLoad();
+                        props.addToBag(productItem._id)
+                    }
+                }
                 >
                     <div style={{ color: "#ffffff" }}>Add to cart</div>
                 </div>
