@@ -73,10 +73,10 @@ function index(props) {
                             </ul>
                         </li>
                         <li className="menu_item">
-                            <a href="#">home</a>
+                            <a href="/">home</a>
                         </li>
                         <li className="menu_item">
-                            <a href="#">shop</a>
+                            <a href="/shops/Women">shop</a>
                         </li>
                         <li className="menu_item">
                             <a href="#">promotion</a>

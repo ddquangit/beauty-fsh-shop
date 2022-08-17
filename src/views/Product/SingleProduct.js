@@ -126,10 +126,10 @@ function SingleProduct(props) {
                 {props.product ? (
                     <>
                         <div className="row">
-                            <div className="col-lg-7">
+                            <div className="col-lg-7 col-md-6">
                                 <div className="single_product_pics">
                                     <div className="row">
-                                        <div className="col-lg-3 thumbnails_col order-lg-1 order-2">
+                                        <div className="col-lg-3 thumbnails_col order-lg-1 order-md-0 order-sm-2 order-2">
                                             <div className="single_product_thumbnails">
                                                 <ul>
                                                     {props.variants &&
@@ -166,7 +166,7 @@ function SingleProduct(props) {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-5">
+                            <div className="col-lg-5 col-md-6 col-sm-12">
                                 <div className="product_details">
                                     <div className="product_details_title">
                                         <h2>{props.product.title}</h2>
@@ -211,9 +211,9 @@ function SingleProduct(props) {
                                         </ul>
                                     </div>
 
-                                    <div className="quantity d-flex flex-column flex-sm-row align-items-sm-center">
+                                    <div className="quantity-product-page">
                                         <span>Quantity:</span>
-                                        <div className="quantity_selector">
+                                        <div className="quantity_selector-single-page">
                                             <span
                                                 className={
                                                     count > 1 ? "minus" : "minus disabled"
@@ -238,7 +238,7 @@ function SingleProduct(props) {
                                             </span>
                                         </div>
                                         <div
-                                            className="red_button product-add_to_cart_button"
+                                            className="add-cart-single-page"
                                             onClick={() => {
                                                 addToBag();
                                                 setCount(1);
@@ -266,7 +266,7 @@ function SingleProduct(props) {
                 ) : (
                     <>
                         <div className="row">
-                            <div className="col-lg-7">
+                            <div className="col-lg-7 col-md-6">
                                 <div className="single_product_pics">
                                     <div className="row">
                                         <div className="col-lg-3 thumbnails_col order-lg-1 order-2">
@@ -285,7 +285,7 @@ function SingleProduct(props) {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-5">
+                            <div className="col-lg-5 col-md-6">
                                 <div className="product_details">
                                     <div className="product_details_title">
                                         <h2><Skeleton height={100} /></h2>

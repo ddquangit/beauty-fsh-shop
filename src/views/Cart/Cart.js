@@ -40,8 +40,7 @@ function Cart(props) {
                         }
                         {items !== undefined && items !== null ? (
                             <div
-                                className="d-flex flex-column justify-content-end align-items-end"
-                                style={{ paddingRight: 50 }}
+                                className="total-cart-detail"
                             >
                                 <p>
                                     SubTotal :{" "}
@@ -64,8 +63,6 @@ function Cart(props) {
                                         $ {CalculateTax(totalPrice).total}
                                     </span>
                                 </h3>
-                                <hr />
-
                                 <Button variant="danger" size="sm" style={{ marginTop: 30 }}>
                                     Confirm Checkout
                                 </Button>

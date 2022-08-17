@@ -11,11 +11,13 @@ function CategoryBanner() {
             <div className="banner">
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-4">
+                        <div className="col-lg-4 col-md-4 col-md-4 col-12">
                             <div
                                 className="banner_item align-items-center"
                                 style={{
-                                    backgroundImage: `url(${Banner1})`
+                                    backgroundImage: `url(${Banner1})`,
+                                    backgroundSize: 'cover',
+                                    backgroundPosition:'top',
                                 }}
                                 data-aos="fade-right"
                             >
@@ -24,11 +26,13 @@ function CategoryBanner() {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-4">
+                        <div className="col-lg-4 col-md-4 col-md-4 col-12">
                             <div
                                 className="banner_item align-items-center"
                                 style={{
-                                    backgroundImage: `url(${Banner2})`
+                                    backgroundImage: `url(${Banner2})`,
+                                    backgroundSize: 'cover',
+                                    backgroundPosition:'center',
                                 }}
                                 data-aos="fade-up"
                             >
@@ -37,11 +41,13 @@ function CategoryBanner() {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-4">
+                        <div className="col-lg-4 col-md-4 col-md-4 col-12">
                             <div
                                 className="banner_item align-items-center"
                                 style={{
-                                    backgroundImage: `url(${Banner3})`
+                                    backgroundImage: `url(${Banner3})`,
+                                    backgroundSize: 'cover',
+                                    backgroundPosition:'top',
                                 }}
                                 data-aos="fade-left"
                             >

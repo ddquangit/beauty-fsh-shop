@@ -88,7 +88,7 @@ function Advertisement(props) {
             <div className="deal_ofthe_week" data-aos="fade-up">
                 <div className="container">
                     <div className="row align-items-center">
-                        <div className="col-lg-6">
+                        <div className="col-lg-6 col-md-12">
                             <div className="deal_ofthe_week_img">
                                 <img src={DEALOFWEEK} alt="" />
                             </div>
@@ -96,7 +96,7 @@ function Advertisement(props) {
                         <div className="col-lg-6 text-right deal_ofthe_week_col">
                             <div className="deal_ofthe_week_content d-flex flex-column align-items-center float-right">
                                 <div className="section_title">
-                                    <h2>Deal Of The Week</h2>
+                                    <h2 className='deal-title'>Deal Of The Week</h2>
                                 </div>
                                 <ul className="timer">
                                     <li className="d-inline-flex flex-column justify-content-center align-items-center">

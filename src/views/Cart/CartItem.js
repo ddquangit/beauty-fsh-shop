@@ -30,7 +30,7 @@ function CartItem({ items, handleClick }) {
                                     }
 
                                 <div className="row shopping--cart--item" data-aos="fade-up">
-                                    <div className="col-sm-2">
+                                    <div className="col-lg-2 col-md-4 col-sm-12 col-12">
                                         <div className="cart--item--img">
                                             <img
                                                 src={items[id].item.imagePath}
@@ -39,7 +39,7 @@ function CartItem({ items, handleClick }) {
                                             />
                                         </div>
                                     </div>
-                                    <div className="col-sm-5">
+                                    <div className="col-lg-5 col-md-4 col-sm-12 col-12 prd-cart-name">
                                         <div
                                             className="basket--item--title"
                                             style={{ marginTop: 10, marginBottom: 10 }}
@@ -60,8 +60,8 @@ function CartItem({ items, handleClick }) {
                                             Price: <span>${items[id].price}</span>
                                         </div>
                                     </div>
-                                    <div className="col-sm-5">
-                                        <div className="quantity d-flex flex-column flex-sm-row align-items-sm-center">
+                                    <div className="col-lg-5 col-md-4 col-sm-12 col-12">
+                                        <div className="quantity">
                                             <span>Quantity:</span>
                                             <div onClick={() => {
                                                 setIDShow(id);

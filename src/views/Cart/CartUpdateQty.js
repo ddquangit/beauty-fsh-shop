@@ -10,7 +10,7 @@ function CartUpdateQty({ id, items, handleClick, handleShowOverlay }) {
         <>
             {isShow ?
                 <div className="row shopping--cart--item shopping-update-qty-container">
-                    <div className="col-sm-2 cart--item--img-contain">
+                    <div className="col-lg-2 col-md-4 col-sm-12 col-12 cart--item--img-contain">
                         <div className="cart--item--img">
                             <img
                                 src={items[id].item.imagePath}
@@ -19,7 +19,7 @@ function CartUpdateQty({ id, items, handleClick, handleShowOverlay }) {
                             />
                         </div>
                     </div>
-                    <div className="col-sm-5">
+                    <div className="col-lg-5 col-md-4 col-sm-12 col-12 prd-cart-name">
                         <div
                             className="basket--item--title"
                             style={{ marginTop: 10, marginBottom: 10 }}
@@ -40,8 +40,8 @@ function CartUpdateQty({ id, items, handleClick, handleShowOverlay }) {
                             Price: <span>${parseFloat((items[id].item.price * count).toFixed(2))}</span>
                         </div>
                     </div>
-                    <div className="col-sm-5">
-                        <div className="quantity d-flex flex-column flex-sm-row align-items-sm-center">
+                    <div className="col-lg-5 col-md-4 col-sm-12 col-12">
+                        <div className="quantity quantity2">
                             <span>Quantity:</span>
                             <div className="quantity_selector">
                                 <span
@@ -62,6 +62,10 @@ function CartUpdateQty({ id, items, handleClick, handleShowOverlay }) {
                                     <i className="fa fa-plus" aria-hidden="true"></i>
                                 </span>
                             </div>
+                        </div>
+                    </div>
+                    <div className="col-lg-12">
+                        <div className="quantity qaty-btn">
                             <span
                                 className="confirm-btn"
                                 onClick={() => {

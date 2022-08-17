@@ -102,6 +102,7 @@ a:hover,
 a:visited,
 a:active,
 a:link {
+  display: block;
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
   -webkit-text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
@@ -1158,7 +1159,7 @@ section {
 
 .product {
   width: 100%;
-  height: 340px;
+  height: 334px;
   background-color: #f2f2f261;
 }
 
@@ -1275,7 +1276,9 @@ section {
 }
 
 .add_to_cart_button {
-  width: 100%;
+  width: 96%;
+  right: -50%;
+  transform: translateX(-50%);
   visibility: hidden;
   opacity: 0;
   -webkit-transition: all 0.3s ease;
@@ -1358,6 +1361,14 @@ section {
 .section_title h2 {
   display: inline-block;
 }
+
+.section_title .deal-title {
+  background-color: white;
+  padding: 10px;
+  border-radius: 3px;
+  box-shadow: 2px 2px 2px #ccc;
+}
+
 
 .section_title::after {
   display: block;
@@ -1640,7 +1651,7 @@ section {
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center center;
 }
 
@@ -1706,15 +1717,17 @@ section {
 }
 
 .star_rating {
-  display: inline-block;
-  margin-left: 33px;
-  width: 20%;
+  display: block;
+  margin: 16px 0;
+  width: 100%;
+
 }
 
 .star_rating li {
   display: inline-block;
   margin-right: -2px;
   cursor: pointer;
+  margin-right: 5px;
 }
 
 .star_rating li i {
@@ -1815,15 +1828,18 @@ section {
 }
 
 .product_favorite {
-  width: 40px;
-  height: 100%;
+  width: 41px;
+  height: 41px;
   margin-left: 22px;
   border: solid 1px #e5e5e5;
   border-radius: 2px;
   cursor: pointer;
+  position:absolute;
+  top: 23px;
+  left: 48%;
 }
 
-.product_favorite:hover::after {
+.product_favorite:hover {
   color: #fe4c50;
 }
 
@@ -2678,7 +2694,7 @@ ul.stander li a {
   background-color: transparent;
 }
 
-.loadding-bar{
+.loadding-bar {
   width: 100%;
   height: 100%;
   display: flex;
@@ -2749,12 +2765,75 @@ ul.stander li a {
 
   50%,
   75% {
-      transform: scale(2.5);
+    transform: scale(2.5);
   }
 
   80%,
   100% {
-      opacity: 0;
+    opacity: 0;
   }
 }
 
+.total-cart-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 50px;
+}
+
+.quantity-product-page {
+  position: relative;
+  flex-direction: column;
+  top: 25px;
+  align-items: flex-start;
+}
+
+#quantity_value {
+  padding: 8px 0;
+}
+
+.quantity_selector-single-page {
+  z-index: 2;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  border: solid 1px #e5e5e5;
+}
+
+.quantity_selector-single-page span {
+  font-weight: 500;
+  color: #232530;
+}
+
+.add-cart-single-page {
+  margin-top: 6px;
+  display: block;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 40px;
+  background: #fe4c50;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.add-cart-single-page:hover {
+  background: #fe7c7f !important;
+}

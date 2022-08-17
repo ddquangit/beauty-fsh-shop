@@ -20,7 +20,7 @@ function BestSeller(props) {
                             products.slice(5, 9).map((item, index) => {
                                 return (
                                     <div
-                                        className="col-lg-3 col-sm-6"
+                                        className="col-lg-3 col-sm-6 mt-4"
                                         key={index}
                                         data-aos="zoom-in"
                                     >

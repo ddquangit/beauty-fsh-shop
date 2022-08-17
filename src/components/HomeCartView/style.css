@@ -2,7 +2,7 @@
 .fade.right.modal .modal-dialog {
   position: fixed;
   margin: auto;
-  width: 320px;
+  max-width: 320px;
   height: 100%;
   right: 0;
   -webkit-transform: translate3d(0%, 0, 0);
