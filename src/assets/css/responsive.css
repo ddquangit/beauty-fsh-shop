@@ -895,7 +895,7 @@
 @media only screen and (max-width: 400px) {
 
   .quantity_selector {
-    width: 90px;
+    width: 150px;
   }
 }
 
@@ -921,6 +921,13 @@
   }
 }
 
+@media only screen and (max-width: 332px) {
+
+  .quantity_selector {
+    width: 100px;
+  }
+}
+
 @media only screen and (max-width: 300px) {
 
   .check-out-link>.checkout--btn {
@@ -928,5 +935,9 @@
   }
   .main_slider_content h6 {
     display: none;
+  }
+
+  .quantity_selector {
+    width: 80px;
   }
 }
