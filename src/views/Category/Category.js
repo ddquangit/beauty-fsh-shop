@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 
+import Auth from "../../modules/Auth";
 import SingleProduct from "../../components/Products/SingleProduct";
 import LoadingOverlay from '../../components/LoadingOverlay';
-import Auth from "../../modules/Auth";
 import LoginRegisterForm from "../../components/LoginRegisterForm";
 import Filter from "./components/Filter";
 
@@ -14,7 +14,7 @@ function Category(props) {
 
     const { products, applyFilters } = props;
 
-    const [isShowLoad, setIsShowLoad ] = useState(false);
+    const [isShowLoad, setIsShowLoad] = useState(false);
     const [isModalShow, setIsModalShow] = useState(false);
     const [isLoginForm, setIsLoginForm] = useState(true);
 
@@ -90,7 +90,7 @@ function Category(props) {
                                                 <li>
                                                     <span className="type_sorting_text">Selection Sort</span>
                                                     <i className="fa fa-angle-down"></i>
-                                                    <ul className="sorting_type">    
+                                                    <ul className="sorting_type">
                                                         <li
                                                             className="type_sorting_btn"
                                                             data-isotope-option='{ "sortBy": "Men" }'
@@ -209,10 +209,13 @@ function Category(props) {
                     onHide={() => showHideModal()}
                 />
                 {!isModalShow &&
-                <LoadingOverlay
-                    show={isShowLoad}
-                />
-            }
+                    (Auth.getUserDetails() !== undefined &&
+                        Auth.getUserDetails() !== null &&
+                        Auth.getToken() !== undefined) &&
+                    <LoadingOverlay
+                        show={isShowLoad}
+                    />
+                }
             </div>
         </>
     )

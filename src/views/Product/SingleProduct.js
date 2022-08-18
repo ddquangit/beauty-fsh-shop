@@ -306,6 +306,9 @@ function SingleProduct(props) {
                 />
             </div>
             {!isModalShow &&
+                (Auth.getUserDetails() !== undefined &&
+                    Auth.getUserDetails() !== null &&
+                    Auth.getToken() !== undefined) &&
                 < LoadingOverlay
                     show={isLoad}
                 />}

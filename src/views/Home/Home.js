@@ -16,7 +16,7 @@ import 'react-loading-skeleton/dist/skeleton.css'
 function Home(props) {
 
     const { products, departments } = props;
-    const [ isShowLoad, setIsShowLoad ] = useState(false);
+    const [isShowLoad, setIsShowLoad] = useState(false);
     const [isModalShow, setIsModalShow] = useState(false);
     const [isLoginForm, setIsLoginForm] = useState(true);
 
@@ -123,6 +123,9 @@ function Home(props) {
                 onHide={() => showHideModal()}
             />
             {!isModalShow &&
+                (Auth.getUserDetails() !== undefined &&
+                    Auth.getUserDetails() !== null &&
+                    Auth.getToken() !== undefined) &&
                 <LoadingOverlay
                     show={isShowLoad}
                 />
